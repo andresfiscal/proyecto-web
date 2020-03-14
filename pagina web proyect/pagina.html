@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="estilo.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+
+
+<!-- Navigation Bar -->
+<div class="navbar">
+  <img src="imagenes/logo.jpg" style="width:3%"></img>
+  <a href="#">sign up</a>
+  <a href="#">sign in</a>
+  <a href="#">About us</a>
+</div>
+<h2></h2>
+<table width="100%" border="0">
+  <tr>
+    <td> <button class="boton" onclick="plusDivs(-1)">&#10094;</button></td>
+    <td><div class="imagenes">
+      <img class="mySlides" src="imagenes/img1.jpg" style="width:70%">
+      <img class="mySlides" src="imagenes/img2.jpg" style="width:70%">
+      <img class="mySlides" src="imagenes/img3.jpg" style="width:70%">
+      <img class="mySlides" src="imagenes/img4.jpg" style="width:70%">
+      </div></td>
+    <td><button class="boton" onclick="plusDivs(1)">&#10095;</button></td>
+  </tr>
+</table>
+<h1>Destacados</h1>
+  <table width="100%" border="0">
+    <tr>
+    <td><div class="card" style="width: 18rem;">
+        <img src="imagenes/nevado.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Nevados</h5>
+          <p class="card-text">Los nevados se producen cuando una montaña alcanza la suficiente altura para que su temperatura sea menor a 0 y comience a nevar.</p>
+          <a href="#" class="btn btn-primary">Ver mas</a>
+        </div>
+      </div>
+    </td>
+
+    <td><div class="card" style="width: 18rem;">
+          <img src="imagenes/volcan.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Volcanes</h5>
+            <p class="card-text">Los volcanes son un tipo de montaña, la cual en su punta existe un crater que contiene magma, el cual se mantiene inactivo hasta que es estimulaso por sucesos como terremotos.</p>
+            <a href="#" class="btn btn-primary">Ver mas</a>
+          </div>
+        </div>
+    </td>
+
+    <td><div class="card" style="width: 18rem;">
+          <img src="imagenes/valle.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Valles</h5>
+            <p class="card-text">Los valles se caracterizan por tener una sona mas baja entre 2 montañas por la cual generalmente pasa un rio.</p>
+            <a href="#" class="btn btn-primary">Ver mas</a>
+          </div>
+        </div>
+    </td>
+</tr>
+</table>
+
+
+<div class="footer">
+  <h6>Andres Felipe Garcia Fiscal 604962</h6>
+  <h6>Programacion web</h6>
+  <h6>Corporacion Universitaria Minuto de Dios</h6>
+
+</div>
+
+<script>
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+
+
+
+</body>
+</html>
